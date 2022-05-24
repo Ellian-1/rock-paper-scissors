@@ -17,12 +17,63 @@
             return computerAattempt;
         }
 
+        //Coding the playRound arrow function
         const playRound = (playerSelection, computerSelection) => {
-            playerSelection = prompt('Please, select an option: Rock, Paper, Scissors');
+            playerSelection = prompt('Please, select an option: Rock, Paper, Scissors').toLowerCase();
             computerSelection = computerPlay();
 
-            return playerSelection;
-            return computerSelection;
+
+            if (playerSelection == 'Rock'.toLowerCase()) {
+                switch (computerSelection) {
+                    case 'Rock'.toLowerCase():
+                        return "You win!";
+                        break;
+
+                    case 'Paper'.toLowerCase():
+                        return "You lose! Scissors beats Paper!";
+                        break;
+
+                    case 'Scissors'.toLowerCase():
+                        return "You lose! Scissors beats Paper!";
+                        break;
+                }
+            }
+
+            else if (playerSelection == 'Paper'.toLowerCase()) {
+                switch (computerSelection) {
+                    case 'Rock'.toLowerCase():
+                        return "You lose! Scissors beats Paper!";
+                        break;
+
+                    case 'Paper'.toLowerCase():
+                        return "You win!";
+                        break;
+
+                    case 'Scissors'.toLowerCase():
+                        return "You lose! Scissors beats Paper!";
+                        break;
+                }
+            }
+            
+            else if (playerSelection == 'Scissors'.toLowerCase()) {
+                switch (computerSelection) {
+                    case 'Rock'.toLowerCase():
+                        return "You lose! Scissors beats Paper!";
+                        break;
+
+                    case 'Paper'.toLowerCase():
+                        return "You lose! Scissors beats Paper!";
+                        break;
+
+                    case 'Scissors'.toLowerCase():
+                        return "You win!";
+                        break;
+                }
+            }
+
+            else {
+                return "Please, write a valid option";
+            }
         }
         
         const game = () => {
