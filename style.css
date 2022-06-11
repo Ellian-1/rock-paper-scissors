@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.results-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.selections {
+    display: flex;
+    justify-content: space-evenly;
+}
