@@ -7,83 +7,26 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
+
+    <div class="container">
+        <button>Rock</button>
+        <button>Papper</button>
+        <button>Scissors</button>
+    </div>
+
     <script>
 
-        //Coding the computerPlay arrow function
         const computerPlay = () => {
-            let attempts = ['Rock', 'Paper', 'Scissors'];
-
-            let computerAattempt = attempts[Math.floor(Math.random() * attempts.length)];
-            return computerAattempt;
+            
         }
 
-        //Coding the playRound arrow function
         const playRound = (playerSelection, computerSelection) => {
-            playerSelection = prompt('Please, select an option: Rock, Paper, Scissors').toLowerCase();
-            computerSelection = computerPlay();
-
-
-            if (playerSelection == 'Rock'.toLowerCase()) {
-                switch (computerSelection) {
-                    case 'Rock':
-                        return "You win!";
-                        break;
-
-                    case 'Paper':
-                        return "You lose! Scissors beats Paper!";
-                        break;
-
-                    case 'Scissors':
-                        return "You lose! Scissors beats Paper!";
-                        break;
-                }
-            }
-
-            else if (playerSelection == 'Paper'.toLowerCase()) {
-                switch (computerSelection) {
-                    case 'Rock':
-                        return "You lose! Scissors beats Paper!";
-                        break;
-
-                    case 'Paper':
-                        return "You win!";
-                        break;
-
-                    case 'Scissors':
-                        return "You lose! Scissors beats Paper!";
-                        break;
-                }
-            }
             
-            else if (playerSelection == 'Scissors'.toLowerCase()) {
-                switch (computerSelection) {
-                    case 'Rock':
-                        return "You lose! Scissors beats Paper!";
-                        break;
-
-                    case 'Paper':
-                        return "You lose! Scissors beats Paper!";
-                        break;
-
-                    case 'Scissors':
-                        return "You win!";
-                        break;
-                }
-            }
-
-            else {
-                return "Please, write a valid option";
-            }
         }
         
-        //Coding the game arrow function
         const game = () => {
-            for (let i; i < 5; i++) {
-                console.log(playRound());
-            }
+            
         }
-
-        game();
     </script>
 </body>
 </html>
